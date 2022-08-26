@@ -1,5 +1,6 @@
 package com.ewari.createoil;
 
+import com.ewari.createoil.block.ModBlocks;
 import com.ewari.createoil.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.level.block.Block;
@@ -33,6 +34,7 @@ public class CreateOil {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 
